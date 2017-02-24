@@ -13,6 +13,10 @@
   },
   "bugs": "https://github.com/dotneet/vue-event-bus/issues",
   "devDependencies": {
+    "uglifyjs": "^2.4.10",
     "vue": "^2.0.0"
+  },
+  "scripts": {
+    "build": "uglifyjs vue-event-bus.js -c -m > vue-event-bus.min.js"
   }
 }

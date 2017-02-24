@@ -1,6 +1,6 @@
 {
   "name": "vue-event-bus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "vue-event-bus.js",
   "files": [
     "vue-event-bus.js"

@@ -1,0 +1,32 @@
+<body>
+
+<div id="emitter"><button @click="emit">emit</button></div>
+<div id="receiver">recieved message: {{ msg }}</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="vue-event-bus.js"></script>
+<script>
+
+// receiver
+new Vue({
+  el: '#receiver',
+  data: function () {
+    return { msg: '' }
+  },
+  created: function () {
+    var vm = this
+    this.$bus.$on('event', function (msg) { vm.msg = msg })
+  }
+})
+
+// emitter
+new Vue({
+  el: '#emitter',
+  methods: {
+    emit: function () {
+      this.$bus.$emit('event', 'test')
+    }
+  }
+})
+</script>
+</body>
